@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Welcome to Smart Load</title>
+    <link th:href="@{/css/layout.css}" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+    <div class="center">
+      <form method="post" action="/regist">
+        <label>年齢を入力してください:</label>
+        <div class="inform">
+          <input type="hidden" name="_method" value="put"/>
+          <input type="text" name="age"/>
+          <button type="submit">送信</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
