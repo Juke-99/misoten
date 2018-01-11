@@ -28,7 +28,7 @@ public class UserController {
 
   @RequestMapping(path = "/regist", method = RequestMethod.PUT)
   public String update(Model model, @ModelAttribute UserForm userForm) {
-    jdbcTemplate.update("UPDATE misoten SET age = ?", userForm.getAge());
+    jdbcTemplate.update("UPDATE misoten SET age = ?, regist_date = CURRENT_TIMESTAMP", userForm.getAge());
 
     return "result";
   }
